@@ -1,0 +1,35 @@
+import java.util.Scanner;
+class Student
+{
+    int Rollno;
+    String name;
+    int marks;
+    void readData(int r,String s,int m)
+    {
+        Rollno=r;
+        name=s;
+        marks=m;
+    }
+    void displayData()
+    {
+        System.out.println("Student Roll Number:"+Rollno);
+        System.out.println("Student Name:"+name);
+        System.out.println("Student Marks:"+marks);
+    }
+}
+public class TestStudent
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("RollNO:");
+        int r=sc.nextInt();
+        System.out.println("Name:");
+        String n=sc.next();
+        System.out.println("Marks:");
+        int m=sc.nextInt();
+        Student s=new Student();
+        s.readData(r,n,m);
+        s.displayData();
+    }
+}
